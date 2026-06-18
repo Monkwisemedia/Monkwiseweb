@@ -24,7 +24,7 @@ const CASE_STUDIES = [
   {
     brand: "Taneja Furniture",
     category: "Local · Furniture",
-    metric: "₹2M",
+    metric: "2M",
     metricLabel: "Social Media Reach",
     summary:
       "Created FOMO & Customer Centric Content to drive social media engagement & Walk-in Traffic.",
