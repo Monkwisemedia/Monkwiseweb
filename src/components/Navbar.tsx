@@ -33,7 +33,7 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-3 group">
           <Image
-            src="/images/logo.png"
+            src="/images/logo-white.png"
             alt="Monk Wise Media"
             width={40}
             height={40}

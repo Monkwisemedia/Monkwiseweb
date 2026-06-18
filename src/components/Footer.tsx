@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-3">
           <Image
-            src="/images/logo.png"
+            src="/images/logo-white.png"
             alt="Monk Wise Media"
             width={32}
             height={32}

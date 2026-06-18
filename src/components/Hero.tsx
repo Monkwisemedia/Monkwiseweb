@@ -17,7 +17,7 @@ export default function Hero() {
           <div className="relative">
             <div className="absolute inset-0 rounded-full bg-accent/30 blur-2xl animate-pulse" />
             <Image
-              src="/images/logo.png"
+              src="/images/logo-white.png"
               alt="Monk Wise Media logo"
               width={88}
               height={88}
