@@ -48,7 +48,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="relative py-24 lg:py-32 bg-bg-elevated">
+    <section id="contact" className="relative bg-bg-elevated flex flex-col justify-center overflow-hidden" style={{ height: "100vh" }}>
       <div className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 h-[400px] w-[600px] rounded-full bg-accent/10 blur-[120px]" />
 
       <div className="relative max-w-3xl mx-auto px-6 lg:px-10 text-center">
@@ -139,7 +139,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={status === "loading"}
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-medium text-bg hover:bg-accent-bright transition-all duration-200 shadow-[0_0_30px_rgba(59,165,92,0.35)] disabled:opacity-60 disabled:cursor-not-allowed"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-medium text-bg hover:bg-accent-bright transition-all duration-200 shadow-[0_0_30px_rgba(20,184,166,0.45)] disabled:opacity-60 disabled:cursor-not-allowed"
             >
               {status === "loading" && (
                 <Loader2 size={16} className="animate-spin" />

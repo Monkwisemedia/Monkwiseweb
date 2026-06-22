@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #080b09;
-  --bg-elevated: #0f140e;
-  --surface: #131a12;
-  --surface-border: #20291d;
-  --fg: #edefea;
-  --fg-muted: #9aa599;
-  --fg-faint: #5c685a;
-  --accent: #3ba55c;
-  --accent-bright: #7fe0a0;
-  --accent-dim: #1f5c37;
+  --bg: #020f0f;
+  --bg-elevated: #071a1a;
+  --surface: #0d2626;
+  --surface-border: #143d3d;
+  --fg: #e2f5f5;
+  --fg-muted: #8ecece;
+  --fg-faint: #3d7070;
+  --accent: #14b8a6;
+  --accent-bright: #2dd4bf;
+  --accent-dim: #0c4a47;
 }
 
 @theme inline {
@@ -33,16 +33,27 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+/* Smooth scroll reveal */
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.reveal {
+  opacity: 0;
+  animation: reveal-up 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
 }
 
 body {
   background: var(--bg);
   color: var(--fg);
   background-image:
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(59, 165, 92, 0.15), transparent),
-    radial-gradient(ellipse 60% 40% at 90% 20%, rgba(127, 224, 160, 0.06), transparent);
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(20, 184, 166, 0.12), transparent),
+    radial-gradient(ellipse 60% 40% at 90% 20%, rgba(45, 212, 191, 0.05), transparent);
   background-repeat: no-repeat;
 }
 
@@ -93,8 +104,35 @@ textarea:focus-visible {
 }
 
 .glow-text {
-  text-shadow: 0 0 30px rgba(127, 224, 160, 0.35);
+  text-shadow: 0 0 40px rgba(45, 212, 191, 0.4), 0 0 80px rgba(20, 184, 166, 0.2);
 }
+
+/* 3D card tilt utility */
+.card-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.1s ease-out, box-shadow 0.3s ease;
+}
+.card-3d:hover {
+  box-shadow: 0 24px 60px rgba(20, 184, 166, 0.15), 0 0 0 1px rgba(45, 212, 191, 0.2);
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-12px) rotate(1deg); }
+  66% { transform: translateY(-6px) rotate(-1deg); }
+}
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-float-slow { animation: float-slow 8s ease-in-out infinite; }
+.animate-spin-slow { animation: spin-slow 20s linear infinite; }
 
 .bg-grain {
   position: relative;
