@@ -4,44 +4,45 @@ import { useRef, useState, useEffect } from "react";
 
 const REELS = [
   {
-    file: "Seasmoke 3_1.mp4",
+    url: "https://res.cloudinary.com/damqledfu/video/upload/v1782139199/Seasmoke_3_1_x6adrv.mp4",
     client: "Seasmoke",
     desc: "Brand reel",
     tag: "Brand Film",
   },
   {
-    file: "Bharat Innovation.mp4",
-    client: "Bharat Innovation",
+    url: "https://res.cloudinary.com/damqledfu/video/upload/v1782139198/Bharat_Innovation_vfd63q.mp4",
+    client: "Bharat Innovations",
     desc: "Campaign video",
     tag: "Campaign",
   },
   {
-    file: "Rimple Pahwa Cotoure Intro.mp4",
+    url: "https://res.cloudinary.com/damqledfu/video/upload/v1782139199/Rimple_Pahwa_Cotoure_Intro_gl8t54.mp4",
     client: "Rimple Pahwa Couture",
     desc: "Brand intro",
     tag: "Brand Film",
   },
   {
-    file: "Blunt Studios Chai Tapri.mp4",
+    url: "https://res.cloudinary.com/damqledfu/video/upload/v1782139196/Blunt_Studios_Chai_Tapri_gy7jzl.mp4",
     client: "Blunt Studios",
     desc: "Chai Tapri reel",
     tag: "Social Reel",
   },
   {
-    file: "MMF Environment Final.mp4",
+    url: "https://res.cloudinary.com/damqledfu/video/upload/v1782139198/MMF_Environment_Final_jdrxvl.mp4",
     client: "MMF Environment",
     desc: "Brand video",
     tag: "Brand Film",
   },
   {
-    file: "Plantation Video.mp4",
+    url: "https://res.cloudinary.com/damqledfu/video/upload/v1782139197/Plantation_Video_dmf6pq.mp4",
     client: "Plantation",
     desc: "Campaign reel",
     tag: "Campaign",
   },
 ];
 
-function ReelCard({ reel, index }: { reel: typeof REELS[0]; index: number }) {
+type Reel = typeof REELS[0];
+function ReelCard({ reel, index }: { reel: Reel; index: number }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const cardRef = useRef<HTMLDivElement>(null);
   const [muted, setMuted] = useState(true);
@@ -137,7 +138,7 @@ function ReelCard({ reel, index }: { reel: typeof REELS[0]; index: number }) {
 
         <video
           ref={videoRef}
-          src={`/videos/${encodeURIComponent(reel.file)}`}
+          src={reel.url}
           muted
           playsInline
           loop
