@@ -23,12 +23,12 @@ export default function HeroScene() {
     camera.position.set(0, 0, 7);
 
     // Lights
-    const ambientLight = new THREE.AmbientLight(0x0d2626, 2);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 2);
     scene.add(ambientLight);
-    const pointLight1 = new THREE.PointLight(0x14b8a6, 60, 20);
+    const pointLight1 = new THREE.PointLight(0xcc1111, 60, 20);
     pointLight1.position.set(4, 4, 4);
     scene.add(pointLight1);
-    const pointLight2 = new THREE.PointLight(0x2dd4bf, 40, 20);
+    const pointLight2 = new THREE.PointLight(0xff3333, 40, 20);
     pointLight2.position.set(-4, -2, 3);
     scene.add(pointLight2);
     const pointLight3 = new THREE.PointLight(0xe2f5f5, 20, 15);
@@ -42,7 +42,7 @@ export default function HeroScene() {
     // Outer wireframe icosahedron
     const outerGeo = new THREE.IcosahedronGeometry(2.4, 1);
     const outerMat = new THREE.MeshBasicMaterial({
-      color: 0x2dd4bf,
+      color: 0xff3333,
       wireframe: true,
       transparent: true,
       opacity: 0.18,
@@ -53,13 +53,13 @@ export default function HeroScene() {
     // Mid icosahedron (solid, glass-like)
     const midGeo = new THREE.IcosahedronGeometry(1.9, 2);
     const midMat = new THREE.MeshPhongMaterial({
-      color: 0x071a1a,
-      emissive: 0x14b8a6,
+      color: 0xf0f0f0,
+      emissive: 0xcc1111,
       emissiveIntensity: 0.25,
       transparent: true,
       opacity: 0.55,
       shininess: 120,
-      specular: 0x2dd4bf,
+      specular: 0xff3333,
     });
     const midIco = new THREE.Mesh(midGeo, midMat);
     mainGroup.add(midIco);
@@ -67,27 +67,27 @@ export default function HeroScene() {
     // Inner core (bright, solid)
     const coreGeo = new THREE.IcosahedronGeometry(1.0, 3);
     const coreMat = new THREE.MeshPhongMaterial({
-      color: 0x0d3a3a,
-      emissive: 0x14b8a6,
+      color: 0xeeeeee,
+      emissive: 0xcc1111,
       emissiveIntensity: 0.6,
       transparent: true,
       opacity: 0.9,
       shininess: 200,
-      specular: 0x7fe8e0,
+      specular: 0xff9999,
     });
     const core = new THREE.Mesh(coreGeo, coreMat);
     mainGroup.add(core);
 
     // Equatorial torus ring
     const ring1Geo = new THREE.TorusGeometry(2.8, 0.012, 6, 120);
-    const ring1Mat = new THREE.MeshBasicMaterial({ color: 0x2dd4bf, transparent: true, opacity: 0.5 });
+    const ring1Mat = new THREE.MeshBasicMaterial({ color: 0xff3333, transparent: true, opacity: 0.5 });
     const ring1 = new THREE.Mesh(ring1Geo, ring1Mat);
     ring1.rotation.x = Math.PI / 2;
     mainGroup.add(ring1);
 
     // Tilted ring
     const ring2Geo = new THREE.TorusGeometry(3.1, 0.008, 4, 100);
-    const ring2Mat = new THREE.MeshBasicMaterial({ color: 0x14b8a6, transparent: true, opacity: 0.3 });
+    const ring2Mat = new THREE.MeshBasicMaterial({ color: 0xcc1111, transparent: true, opacity: 0.3 });
     const ring2 = new THREE.Mesh(ring2Geo, ring2Mat);
     ring2.rotation.x = Math.PI / 3;
     ring2.rotation.y = Math.PI / 6;
@@ -95,10 +95,10 @@ export default function HeroScene() {
 
     // --- ORBITING SATELLITES ---
     const satelliteData = [
-      { radius: 3.8, speed: 0.4, size: 0.12, color: 0x2dd4bf, yOffset: 0.8, phase: 0 },
-      { radius: 4.3, speed: 0.28, size: 0.09, color: 0x14b8a6, yOffset: -0.5, phase: Math.PI / 2 },
-      { radius: 3.5, speed: 0.55, size: 0.07, color: 0x7fe8e0, yOffset: 0.2, phase: Math.PI },
-      { radius: 4.8, speed: 0.18, size: 0.14, color: 0x0c4a47, yOffset: -1.2, phase: Math.PI * 1.5 },
+      { radius: 3.8, speed: 0.4, size: 0.12, color: 0xff3333, yOffset: 0.8, phase: 0 },
+      { radius: 4.3, speed: 0.28, size: 0.09, color: 0xcc1111, yOffset: -0.5, phase: Math.PI / 2 },
+      { radius: 3.5, speed: 0.55, size: 0.07, color: 0xff9999, yOffset: 0.2, phase: Math.PI },
+      { radius: 4.8, speed: 0.18, size: 0.14, color: 0x7a0808, yOffset: -1.2, phase: Math.PI * 1.5 },
     ];
 
     const satellites = satelliteData.map((d) => {
@@ -135,7 +135,7 @@ export default function HeroScene() {
     particleGeo.setAttribute("size", new THREE.BufferAttribute(sizes, 1));
 
     const particleMat = new THREE.PointsMaterial({
-      color: 0x2dd4bf,
+      color: 0xff3333,
       size: 0.035,
       transparent: true,
       opacity: 0.6,
@@ -163,7 +163,7 @@ export default function HeroScene() {
           const lineGeo = new THREE.BufferGeometry().setFromPoints([linePts[i], linePts[j]]);
           const lineMesh = new THREE.Line(
             lineGeo,
-            new THREE.LineBasicMaterial({ color: 0x14b8a6, transparent: true, opacity: 0.12 })
+            new THREE.LineBasicMaterial({ color: 0xcc1111, transparent: true, opacity: 0.12 })
           );
           mainGroup.add(lineMesh);
         }

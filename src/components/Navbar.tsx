@@ -40,7 +40,7 @@ export default function Navbar() {
           className="flex items-center gap-3 group"
         >
           <Image
-            src="/images/logo-white.png"
+            src="/images/logo-red.png"
             alt="Monk Wise Media"
             width={40}
             height={40}
@@ -66,7 +66,7 @@ export default function Navbar() {
         <button
           onClick={() => handleNav("contact")}
           className="hidden lg:inline-flex items-center gap-2 rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-bg hover:bg-accent-bright transition-colors duration-200"
-          style={{ boxShadow: "0 0 24px rgba(20,184,166,0.4)" }}
+          style={{ boxShadow: "0 0 24px rgba(204,17,17,0.4)" }}
         >
           Start a Project
         </button>

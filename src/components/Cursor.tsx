@@ -80,12 +80,11 @@ export default function Cursor() {
           width: 8,
           height: 8,
           borderRadius: "50%",
-          background: hovered ? "#2dd4bf" : "#e2f5f5",
+          background: hovered ? "#cc1111" : "#111111",
           opacity: visible ? 1 : 0,
           transform: clicked ? "scale(0.6)" : "scale(1)",
           transition: "opacity 0.2s, background 0.2s, transform 0.1s",
           willChange: "transform",
-          mixBlendMode: "difference",
         }}
       />
       {/* Ring */}
@@ -96,7 +95,7 @@ export default function Cursor() {
           width: 40,
           height: 40,
           borderRadius: "50%",
-          border: `1.5px solid ${hovered ? "rgba(45,212,191,0.8)" : "rgba(226,245,245,0.4)"}`,
+          border: `1.5px solid ${hovered ? "rgba(204,17,17,0.8)" : "rgba(17,17,17,0.3)"}`,
           opacity: visible ? 1 : 0,
           transform: hovered ? "scale(1.5)" : clicked ? "scale(0.8)" : "scale(1)",
           transition: "opacity 0.2s, border-color 0.2s, transform 0.25s ease",

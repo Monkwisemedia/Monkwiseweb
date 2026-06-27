@@ -28,7 +28,7 @@ const TESTIMONIALS = [
 
 function TestimonialCard({ t }: { t: typeof TESTIMONIALS[0] }) {
   const ref = useRef<HTMLDivElement>(null);
-  const [transform, setTransform] = useState("perspective(800px) rotateX(0deg) rotateY(0deg)");
+  const [tiltTransform, setTiltTransform] = useState("perspective(800px) rotateX(0deg) rotateY(0deg)");
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const card = ref.current;
@@ -38,22 +38,24 @@ function TestimonialCard({ t }: { t: typeof TESTIMONIALS[0] }) {
     const y = e.clientY - rect.top;
     const rotX = -((y - rect.height / 2) / rect.height) * 8;
     const rotY = ((x - rect.width / 2) / rect.width) * 8;
-    setTransform(`perspective(800px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateZ(6px)`);
+    setTiltTransform(`perspective(800px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateZ(6px)`);
   };
 
   const handleMouseLeave = () =>
-    setTransform("perspective(800px) rotateX(0deg) rotateY(0deg) translateZ(0px)");
+    setTiltTransform("perspective(800px) rotateX(0deg) rotateY(0deg) translateZ(0px)");
 
   return (
     <figure
       ref={ref}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="card-glass rounded-2xl p-7 flex flex-col justify-between relative overflow-hidden cursor-default"
+      className="rounded-2xl p-7 flex flex-col justify-between relative overflow-hidden cursor-default"
       style={{
-        transform,
+        background: "#ffffff",
+        border: "1px solid #e5e5e5",
+        boxShadow: "0 4px 24px rgba(0,0,0,0.07)",
+        transform: tiltTransform,
         transition: "transform 0.12s ease-out, box-shadow 0.3s ease",
-        boxShadow: "0 4px 30px rgba(20,184,166,0.05)",
       }}
     >
       <div className="pointer-events-none absolute top-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-accent/25 to-transparent" />
@@ -69,8 +71,8 @@ function TestimonialCard({ t }: { t: typeof TESTIMONIALS[0] }) {
         <div
           className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-medium text-accent-bright flex-shrink-0"
           style={{
-            background: "linear-gradient(135deg, rgba(20,184,166,0.2), rgba(13,38,38,0.8))",
-            border: "1px solid rgba(45,212,191,0.25)",
+            background: "linear-gradient(135deg, rgba(204,17,17,0.15), rgba(255,240,240,0.8))",
+            border: "1px solid rgba(204,17,17,0.25)",
           }}
         >
           {t.initials}

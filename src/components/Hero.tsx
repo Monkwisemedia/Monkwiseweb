@@ -78,7 +78,7 @@ export default function Hero() {
             <br />
             <span
               className="text-accent-bright"
-              style={{ textShadow: "0 0 40px rgba(45,212,191,0.45), 0 0 80px rgba(20,184,166,0.2)" }}
+              style={{ textShadow: "0 0 40px rgba(204,17,17,0.3), 0 0 80px rgba(204,17,17,0.1)" }}
             >
               from the roots up.
             </span>
@@ -131,7 +131,7 @@ export default function Hero() {
               <div key={s.label}>
                 <p
                   className="font-display font-semibold text-3xl text-accent-bright"
-                  style={{ textShadow: "0 0 20px rgba(45,212,191,0.3)" }}
+                  style={{ textShadow: "0 0 20px rgba(204,17,17,0.2)" }}
                 >
                   {s.value}
                 </p>
@@ -200,8 +200,8 @@ function MagneticButton({
       }`}
       style={
         primary
-          ? { boxShadow: "0 0 30px rgba(20,184,166,0.4), 0 0 60px rgba(20,184,166,0.15)", transition: "transform 0.3s cubic-bezier(0.23, 1, 0.32, 1), background 0.2s" }
-          : { backdropFilter: "blur(8px)", background: "rgba(13,38,38,0.3)", transition: "transform 0.3s cubic-bezier(0.23, 1, 0.32, 1), border-color 0.2s, color 0.2s" }
+          ? { boxShadow: "0 0 30px rgba(204,17,17,0.4), 0 0 60px rgba(204,17,17,0.15)", transition: "transform 0.3s cubic-bezier(0.23, 1, 0.32, 1), background 0.2s" }
+          : { backdropFilter: "blur(8px)", background: "rgba(240,240,240,0.3)", transition: "transform 0.3s cubic-bezier(0.23, 1, 0.32, 1), border-color 0.2s, color 0.2s" }
       }
     >
       {children}

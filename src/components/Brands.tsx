@@ -50,16 +50,16 @@ function BrandPill({ brand }: { brand: typeof BRANDS[0] }) {
     <div
       className="flex items-center gap-3 rounded-full px-5 py-3 flex-shrink-0 group transition-all duration-300"
       style={{
-        background: "linear-gradient(135deg, rgba(13,38,38,0.8), rgba(7,26,26,0.6))",
-        border: "1px solid rgba(20,61,61,0.8)",
+        background: "linear-gradient(135deg, rgba(240,240,240,0.8), rgba(247,247,247,0.6))",
+        border: "1px solid rgba(220,220,220,0.8)",
         backdropFilter: "blur(12px)",
       }}
       onMouseEnter={(e) => {
-        (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(45,212,191,0.3)";
-        (e.currentTarget as HTMLDivElement).style.boxShadow = "0 0 20px rgba(20,184,166,0.1)";
+        (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(255,51,51,0.3)";
+        (e.currentTarget as HTMLDivElement).style.boxShadow = "0 0 20px rgba(204,17,17,0.1)";
       }}
       onMouseLeave={(e) => {
-        (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(20,61,61,0.8)";
+        (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(220,220,220,0.8)";
         (e.currentTarget as HTMLDivElement).style.boxShadow = "none";
       }}
     >
@@ -69,8 +69,8 @@ function BrandPill({ brand }: { brand: typeof BRANDS[0] }) {
         <div
           className="w-7 h-7 rounded-full flex items-center justify-center text-accent-bright font-mono text-[0.6rem] font-medium flex-shrink-0"
           style={{
-            background: "linear-gradient(135deg, rgba(20,184,166,0.2), rgba(7,26,26,0.8))",
-            border: "1px solid rgba(45,212,191,0.2)",
+            background: "linear-gradient(135deg, rgba(204,17,17,0.2), rgba(247,247,247,0.8))",
+            border: "1px solid rgba(255,51,51,0.2)",
           }}
         >
           {initials}

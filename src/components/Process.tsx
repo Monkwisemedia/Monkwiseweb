@@ -93,9 +93,9 @@ export default function Process() {
                 key={s.stage}
                 className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full border text-accent-bright font-mono text-xs font-medium"
                 style={{
-                  background: "linear-gradient(135deg, rgba(20,184,166,0.2), rgba(13,38,38,0.8))",
-                  borderColor: "rgba(45,212,191,0.35)",
-                  boxShadow: "0 0 20px rgba(20,184,166,0.2)",
+                  background: "linear-gradient(135deg, rgba(204,17,17,0.2), rgba(240,240,240,0.8))",
+                  borderColor: "rgba(255,51,51,0.35)",
+                  boxShadow: "0 0 20px rgba(204,17,17,0.2)",
                   transform: visible
                     ? `translateZ(0px) scale(1)`
                     : `translateZ(-40px) scale(0.8)`,
@@ -112,14 +112,16 @@ export default function Process() {
             {STAGES.map((s) => (
               <div
                 key={s.stage}
-                className="card-glass rounded-2xl p-6 relative overflow-hidden group hover:-translate-y-2 transition-transform duration-300"
+                className="rounded-2xl p-6 relative overflow-hidden group hover:-translate-y-2 transition-transform duration-300"
                 style={{
+                  background: "#ffffff",
+                  border: "1px solid #e5e5e5",
+                  boxShadow: "0 4px 24px rgba(0,0,0,0.07)",
                   transform: visible
                     ? `perspective(600px) rotateX(0deg) translateZ(0px)`
                     : `perspective(600px) rotateX(15deg) translateZ(-30px)`,
                   opacity: visible ? 1 : 0,
                   transition: `transform 0.7s ease ${s.delay}ms, opacity 0.7s ease ${s.delay}ms`,
-                  boxShadow: "0 4px 30px rgba(20,184,166,0.05)",
                 }}
               >
                 <div className="pointer-events-none absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-transparent via-accent/25 to-transparent" />
@@ -139,8 +141,8 @@ export default function Process() {
                 <div
                   className="flex items-center justify-center w-10 h-10 rounded-full text-accent-bright font-mono text-xs flex-shrink-0"
                   style={{
-                    background: "linear-gradient(135deg, rgba(20,184,166,0.2), rgba(13,38,38,0.8))",
-                    border: "1px solid rgba(45,212,191,0.3)",
+                    background: "linear-gradient(135deg, rgba(204,17,17,0.2), rgba(240,240,240,0.8))",
+                    border: "1px solid rgba(255,51,51,0.3)",
                   }}
                 >
                   {s.stage}
@@ -149,7 +151,7 @@ export default function Process() {
                   <div className="w-px flex-1 mt-2 bg-gradient-to-b from-accent/30 to-transparent" />
                 )}
               </div>
-              <div className="card-glass rounded-2xl p-6 flex-1 mb-2">
+              <div className="rounded-2xl p-6 flex-1 mb-2" style={{ background: "#ffffff", border: "1px solid #e5e5e5", boxShadow: "0 4px 24px rgba(0,0,0,0.07)" }}>
                 <p className="font-mono text-[0.65rem] uppercase tracking-[0.2em] text-accent-bright mb-1">{s.label}</p>
                 <h3 className="font-display font-medium text-lg text-fg mb-2">{s.title}</h3>
                 <p className="text-sm text-fg-muted leading-relaxed">{s.desc}</p>

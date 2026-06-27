@@ -9,42 +9,42 @@ const SERVICES = [
     title: "Content Creation",
     back: "Scroll-stopping reels, static creatives, and brand films shot and edited to perform, not just look good.",
     stat: "200+", statLabel: "Pieces/month",
-    color: "#14b8a6",
+    color: "#cc1111",
   },
   {
     icon: Target,
     title: "Paid Advertising",
     back: "Performance campaigns across Meta, Google, JioHotstar, and ChatGPT Ads built around your actual unit economics.",
     stat: "10x", statLabel: "Avg. ROAS",
-    color: "#2dd4bf",
+    color: "#ff3333",
   },
   {
     icon: Megaphone,
     title: "Social Media Mgmt",
     back: "Calendars, community replies, and a posting rhythm that compounds instead of resetting every month.",
     stat: "50K+", statLabel: "Followers grown",
-    color: "#14b8a6",
+    color: "#cc1111",
   },
   {
     icon: ShoppingBag,
     title: "D2C Brand Mgmt",
     back: "End-to-end ownership of how your brand shows up online, from positioning to the campaigns that carry it.",
     stat: "50+", statLabel: "Brands managed",
-    color: "#2dd4bf",
+    color: "#ff3333",
   },
   {
     icon: Code2,
     title: "Website Dev",
     back: "Fast, conversion-ready websites and landing pages built to turn ad traffic into customers, not just visitors.",
     stat: "<2s", statLabel: "Avg. load time",
-    color: "#14b8a6",
+    color: "#cc1111",
   },
   {
     icon: Layers,
     title: "Full Growth Systems",
     back: "Strategy, creative, media buying, and the site they all point to, run as one connected system.",
     stat: "3x", statLabel: "Revenue growth",
-    color: "#2dd4bf",
+    color: "#ff3333",
   },
 ];
 
@@ -92,9 +92,9 @@ function ServiceCard({ s }: { s: typeof SERVICES[0] }) {
           className="absolute inset-0 rounded-2xl p-7 flex flex-col"
           style={{
             backfaceVisibility: "hidden",
-            background: "linear-gradient(160deg, rgba(13,38,38,0.9), rgba(7,26,26,0.7))",
-            border: "1px solid rgba(20,61,61,0.9)",
-            boxShadow: "inset 0 1px 0 rgba(45,212,191,0.08)",
+            background: "linear-gradient(160deg, rgba(240,240,240,0.9), rgba(247,247,247,0.7))",
+            border: "1px solid rgba(220,220,220,0.9)",
+            boxShadow: "inset 0 1px 0 rgba(255,51,51,0.08)",
           }}
         >
           <div className="pointer-events-none absolute top-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent" />

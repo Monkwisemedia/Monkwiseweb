@@ -65,7 +65,8 @@ export default function Contact() {
 
         <form
           onSubmit={handleSubmit}
-          className="mt-12 card-glass rounded-2xl p-6 sm:p-9 text-left grid grid-cols-1 sm:grid-cols-2 gap-5"
+          className="mt-12 rounded-2xl p-6 sm:p-9 text-left grid grid-cols-1 sm:grid-cols-2 gap-5"
+          style={{ background: "#ffffff", border: "1px solid #e5e5e5", boxShadow: "0 4px 24px rgba(0,0,0,0.07)" }}
         >
           <div className="flex flex-col gap-2">
             <label htmlFor="name" className="text-xs text-fg-muted">
@@ -139,7 +140,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={status === "loading"}
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-medium text-bg hover:bg-accent-bright transition-all duration-200 shadow-[0_0_30px_rgba(20,184,166,0.45)] disabled:opacity-60 disabled:cursor-not-allowed"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-medium text-bg hover:bg-accent-bright transition-all duration-200 shadow-[0_0_30px_rgba(204,17,17,0.45)] disabled:opacity-60 disabled:cursor-not-allowed"
             >
               {status === "loading" && (
                 <Loader2 size={16} className="animate-spin" />

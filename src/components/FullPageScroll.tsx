@@ -89,7 +89,7 @@ export default function FullPageScroll({ children }: { children: React.ReactNode
           >
             <span
               className="opacity-0 group-hover:opacity-100 text-[0.65rem] text-fg-muted whitespace-nowrap transition-all duration-200 rounded px-2 py-0.5 pointer-events-none"
-              style={{ background: "rgba(7,26,26,0.85)", backdropFilter: "blur(8px)", border: "1px solid rgba(20,61,61,0.8)" }}
+              style={{ background: "rgba(247,247,247,0.85)", backdropFilter: "blur(8px)", border: "1px solid rgba(220,220,220,0.8)" }}
             >
               {name}
             </span>
@@ -99,7 +99,7 @@ export default function FullPageScroll({ children }: { children: React.ReactNode
                 height: i === current ? 10 : 6,
                 borderRadius: i === current ? 4 : "50%",
                 background: i === current ? "var(--accent-bright)" : "var(--fg-faint)",
-                boxShadow: i === current ? "0 0 12px rgba(45,212,191,0.7)" : "none",
+                boxShadow: i === current ? "0 0 12px rgba(255,51,51,0.7)" : "none",
                 transition: "all 0.35s cubic-bezier(0.23,1,0.32,1)",
               }}
             />
@@ -117,7 +117,7 @@ export default function FullPageScroll({ children }: { children: React.ReactNode
             style={{
               position: "absolute", inset: 0,
               background: "var(--accent-bright)",
-              boxShadow: "0 0 6px rgba(45,212,191,0.8)",
+              boxShadow: "0 0 6px rgba(255,51,51,0.8)",
               transformOrigin: "left",
               transform: `scaleX(${(current + 1) / total})`,
               transition: "transform 0.85s cubic-bezier(0.77,0,0.175,1)",

@@ -104,10 +104,10 @@ function ReelCard({ reel, index }: { reel: Reel; index: number }) {
         className="relative rounded-2xl overflow-hidden"
         style={{
           aspectRatio: "9/16",
-          background: "#071a1a",
-          border: `1px solid ${hovered ? "rgba(45,212,191,0.4)" : "rgba(20,55,55,0.7)"}`,
+          background: "#f7f7f7",
+          border: `1px solid ${hovered ? "rgba(255,51,51,0.4)" : "rgba(220,220,220,0.7)"}`,
           boxShadow: hovered
-            ? "0 24px 60px rgba(20,184,166,0.2), 0 0 0 1px rgba(45,212,191,0.15)"
+            ? "0 24px 60px rgba(204,17,17,0.2), 0 0 0 1px rgba(255,51,51,0.15)"
             : "0 4px 20px rgba(0,0,0,0.4)",
           transition: "border-color 0.3s, box-shadow 0.3s",
         }}
@@ -117,7 +117,7 @@ function ReelCard({ reel, index }: { reel: Reel; index: number }) {
           <div
             className="absolute inset-0 z-10"
             style={{
-              background: "linear-gradient(135deg, #071a1a, #0d2626, #071a1a)",
+              background: "linear-gradient(135deg, #110505, #1c0808, #110505)",
               backgroundSize: "200% 200%",
               animation: "shimmer 2s ease-in-out infinite",
             }}
@@ -125,9 +125,9 @@ function ReelCard({ reel, index }: { reel: Reel; index: number }) {
             <div className="absolute inset-0 flex items-center justify-center flex-col gap-3">
               <div
                 className="w-12 h-12 rounded-2xl flex items-center justify-center"
-                style={{ background: "rgba(20,184,166,0.15)", border: "1px solid rgba(45,212,191,0.2)" }}
+                style={{ background: "rgba(204,17,17,0.15)", border: "1px solid rgba(255,51,51,0.2)" }}
               >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2dd4bf" strokeWidth="1.5">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ff3333" strokeWidth="1.5">
                   <polygon points="5,3 19,12 5,21" />
                 </svg>
               </div>
@@ -152,7 +152,7 @@ function ReelCard({ reel, index }: { reel: Reel; index: number }) {
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-            background: "linear-gradient(to top, rgba(2,15,15,0.85) 0%, transparent 40%)",
+            background: "linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 40%)",
           }}
         />
 
@@ -163,8 +163,8 @@ function ReelCard({ reel, index }: { reel: Reel; index: number }) {
         <div
           className="absolute top-3 left-3 px-2 py-0.5 rounded-full font-mono text-[0.6rem] uppercase tracking-widest"
           style={{
-            background: "rgba(7,26,26,0.85)",
-            border: "1px solid rgba(45,212,191,0.2)",
+            background: "rgba(247,247,247,0.85)",
+            border: "1px solid rgba(255,51,51,0.2)",
             color: "var(--accent-bright)",
             backdropFilter: "blur(8px)",
           }}
@@ -178,8 +178,8 @@ function ReelCard({ reel, index }: { reel: Reel; index: number }) {
             onClick={toggleMute}
             className="absolute top-3 right-3 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-200"
             style={{
-              background: "rgba(7,26,26,0.85)",
-              border: "1px solid rgba(45,212,191,0.25)",
+              background: "rgba(247,247,247,0.85)",
+              border: "1px solid rgba(255,51,51,0.25)",
               backdropFilter: "blur(8px)",
               color: "var(--accent-bright)",
             }}
@@ -206,9 +206,9 @@ function ReelCard({ reel, index }: { reel: Reel; index: number }) {
           >
             <div
               className="w-10 h-10 rounded-full flex items-center justify-center"
-              style={{ background: "rgba(20,184,166,0.2)", border: "1px solid rgba(45,212,191,0.3)" }}
+              style={{ background: "rgba(204,17,17,0.2)", border: "1px solid rgba(255,51,51,0.3)" }}
             >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#2dd4bf">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#ff3333">
                 <polygon points="5,3 19,12 5,21" />
               </svg>
             </div>
